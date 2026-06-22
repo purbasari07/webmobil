@@ -96,160 +96,158 @@
         </section>
 
         <!-- Layanan Section -->
-        <section id="layanan" class="py-20 bg-[#0a0b0e] border-t border-white/5 relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Layanan Profesional</h2>
-                    <p class="text-slate-400 text-base leading-relaxed">Solusi perawatan kendaraan paripurna. Tim mekanik kami siap membantu merawat mobil Anda agar selalu dalam kondisi prima.</p>
+        <section id="layanan" style="padding: 80px 24px; background: #0a0b0e; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 56px;">
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 12px;">Layanan Profesional</h2>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Solusi perawatan kendaraan paripurna. Tim mekanik kami siap membantu merawat mobil Anda agar selalu dalam kondisi prima.</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
                     <!-- Service 1 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
-                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <div style="padding: 32px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;">
+                        <div style="width: 52px; height: 52px; background: rgba(168,85,247,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #a78bfa; margin-bottom: 20px;">
+                            <svg style="width:26px;height:26px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Servis Berkala</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Penggantian oli, filter udara, pengecekan busi, dan pemeliharaan standar untuk menjaga mesin tetap sehat.</p>
+                        <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 10px;">Servis Berkala</h3>
+                        <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.7;">Penggantian oli, filter udara, pengecekan busi, dan pemeliharaan standar untuk menjaga mesin tetap sehat.</p>
                     </div>
                     <!-- Service 2 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
-                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <div style="padding: 32px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;">
+                        <div style="width: 52px; height: 52px; background: rgba(168,85,247,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #a78bfa; margin-bottom: 20px;">
+                            <svg style="width:26px;height:26px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Tune Up Mesin</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Kalibrasi ulang mesin, injeksi, dan sistem pembakaran untuk akselerasi maksimal dan efisiensi bahan bakar.</p>
+                        <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 10px;">Tune Up Mesin</h3>
+                        <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.7;">Kalibrasi ulang mesin, injeksi, dan sistem pembakaran untuk akselerasi maksimal dan efisiensi bahan bakar.</p>
                     </div>
                     <!-- Service 3 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
-                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <div style="padding: 32px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;">
+                        <div style="width: 52px; height: 52px; background: rgba(168,85,247,0.1); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #a78bfa; margin-bottom: 20px;">
+                            <svg style="width:26px;height:26px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Sistem Rem & Kaki</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Pemeriksaan rem komprehensif, ganti kampas, balancing, serta spooring untuk kenyamanan dan keamanan.</p>
+                        <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 10px;">Sistem Rem &amp; Kaki</h3>
+                        <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.7;">Pemeriksaan rem komprehensif, ganti kampas, balancing, serta spooring untuk kenyamanan dan keamanan.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Keunggulan Section -->
-        <section id="keunggulan" class="py-20 relative overflow-hidden">
-            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-3xl md:text-4xl font-bold leading-tight">Pengalaman Digital Sepenuhnya</h2>
-                    <p class="text-slate-400 text-base leading-relaxed">
+        <section id="keunggulan" style="padding: 80px 24px; background: #0f1115;">
+            <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                <!-- Left: Text -->
+                <div>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.2;">Pengalaman Digital Sepenuhnya</h2>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 32px;">
                         Tinggalkan antrean yang membosankan dan transparansi harga yang buruk. Melalui sistem bengkel kami, semua dapat dilakukan melalui ponsel cerdas Anda.
                     </p>
-                    
-                    <div class="space-y-6 pt-4">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <div style="display: flex; flex-direction: column; gap: 24px;">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); display: flex; align-items: center; justify-content: center; color: #a78bfa; flex-shrink: 0;">
+                                <svg style="width:20px;height:20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Booking Mudah</h4>
-                                <p class="text-slate-400 text-sm leading-relaxed">Pilih slot waktu sesuai ketersediaan jadwal Anda langsung dari aplikasi.</p>
+                                <h4 style="font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Booking Mudah</h4>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.6;">Pilih slot waktu sesuai ketersediaan jadwal Anda langsung dari aplikasi.</p>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); display: flex; align-items: center; justify-content: center; color: #a78bfa; flex-shrink: 0;">
+                                <svg style="width:20px;height:20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Pantau Status Real-Time</h4>
-                                <p class="text-slate-400 text-sm leading-relaxed">Lihat apakah mobil Anda sedang dikerjakan mekanik atau sudah selesai.</p>
+                                <h4 style="font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Pantau Status Real-Time</h4>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.6;">Lihat apakah mobil Anda sedang dikerjakan mekanik atau sudah selesai.</p>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.2); display: flex; align-items: center; justify-content: center; color: #a78bfa; flex-shrink: 0;">
+                                <svg style="width:20px;height:20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-1">Invoice Digital & Transparan</h4>
-                                <p class="text-slate-400 text-sm leading-relaxed">Rincian sparepart, biaya perbaikan, dan riwayat disimpan rapi tanpa kertas.</p>
+                                <h4 style="font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Invoice Digital &amp; Transparan</h4>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.6;">Rincian sparepart, biaya perbaikan, dan riwayat disimpan rapi tanpa kertas.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Stats Visual -->
-                <div class="grid grid-cols-2 gap-6 relative">
-                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md">
-                        <h3 class="text-4xl font-extrabold text-white mb-2">12K+</h3>
-                        <p class="text-slate-400 font-medium text-sm">Mobil Terservis</p>
+                <!-- Right: Stats -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="padding: 28px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;">12K+</div>
+                        <div style="font-size: 0.875rem; color: #94a3b8;">Mobil Terservis</div>
                     </div>
-                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md translate-y-6">
-                        <h3 class="text-4xl font-extrabold text-purple-400 mb-2">99%</h3>
-                        <p class="text-slate-400 font-medium text-sm">Kepuasan Pelanggan</p>
+                    <div style="padding: 28px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; text-align: center; margin-top: 24px;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #a78bfa; margin-bottom: 8px;">99%</div>
+                        <div style="font-size: 0.875rem; color: #94a3b8;">Kepuasan Pelanggan</div>
                     </div>
-                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md">
-                        <h3 class="text-4xl font-extrabold text-white mb-2">30+</h3>
-                        <p class="text-slate-400 font-medium text-sm">Mekanik Handal</p>
+                    <div style="padding: 28px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;">30+</div>
+                        <div style="font-size: 0.875rem; color: #94a3b8;">Mekanik Handal</div>
                     </div>
-                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md translate-y-6">
-                        <h3 class="text-4xl font-extrabold text-white mb-2">4.9</h3>
-                        <p class="text-slate-400 font-medium text-sm">Rating Google</p>
+                    <div style="padding: 28px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; text-align: center; margin-top: 24px;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;">4.9</div>
+                        <div style="font-size: 0.875rem; color: #94a3b8;">Rating Google</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimoni Section -->
-        <section id="testimoni" class="py-20 bg-[#0a0b0e] border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ulasan Pelanggan</h2>
-                    <p class="text-slate-400 text-base leading-relaxed">Mereka yang telah merasakan pengalaman bebas antre dan transparansi biaya servis.</p>
+        <section id="testimoni" style="padding: 80px 24px; background: #0a0b0e; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 56px;">
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 12px;">Ulasan Pelanggan</h2>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Mereka yang telah merasakan pengalaman bebas antre dan transparansi biaya servis.</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
                     <!-- Card 1 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
+                    <div style="padding: 28px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px;">
                         <div>
-                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
+                            <div style="font-size: 2.5rem; color: #7c3aed; font-family: Georgia, serif; line-height: 1; margin-bottom: 12px;">&ldquo;</div>
+                            <p style="color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; margin-bottom: 20px;">
                                 Proses masuk bengkel sangat mulus. Booking dari aplikasi semalam, pagi datang langsung ditangani. Sangat praktis!
                             </p>
                         </div>
-                        <div class="flex items-center gap-4 mt-auto">
-                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">R</div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">R</div>
                             <div>
-                                <h4 class="font-bold text-base">Reza H.</h4>
-                                <p class="text-xs text-slate-500 mt-0.5">Honda CR-V</p>
+                                <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Reza H.</div>
+                                <div style="font-size: 0.75rem; color: #64748b;">Honda CR-V</div>
                             </div>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
+                    <div style="padding: 28px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px;">
                         <div>
-                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
+                            <div style="font-size: 2.5rem; color: #7c3aed; font-family: Georgia, serif; line-height: 1; margin-bottom: 12px;">&ldquo;</div>
+                            <p style="color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; margin-bottom: 20px;">
                                 Suka dengan fitur transparansi harganya. Mekanik selalu minta persetujuan di aplikasi sebelum mengganti sparepart.
                             </p>
                         </div>
-                        <div class="flex items-center gap-4 mt-auto">
-                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">A</div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">A</div>
                             <div>
-                                <h4 class="font-bold text-base">Anita P.</h4>
-                                <p class="text-xs text-slate-500 mt-0.5">Toyota Yaris</p>
+                                <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Anita P.</div>
+                                <div style="font-size: 0.75rem; color: #64748b;">Toyota Yaris</div>
                             </div>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
+                    <div style="padding: 28px; background: #0f1115; border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px;">
                         <div>
-                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
+                            <div style="font-size: 2.5rem; color: #7c3aed; font-family: Georgia, serif; line-height: 1; margin-bottom: 12px;">&ldquo;</div>
+                            <p style="color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; margin-bottom: 20px;">
                                 Invoice digitalnya bikin gampang klaim servis kantor. Tinggal unduh dari dashboard, rapi dan profesional.
                             </p>
                         </div>
-                        <div class="flex items-center gap-4 mt-auto">
-                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">B</div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">B</div>
                             <div>
-                                <h4 class="font-bold text-base">Budi K.</h4>
-                                <p class="text-xs text-slate-500 mt-0.5">Mitsubishi Xpander</p>
+                                <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Budi K.</div>
+                                <div style="font-size: 0.75rem; color: #64748b;">Mitsubishi Xpander</div>
                             </div>
                         </div>
                     </div>
