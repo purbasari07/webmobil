@@ -126,9 +126,6 @@
             <!-- Top Bar Header -->
             <header class="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between shadow-sm">
                 <div class="flex items-center gap-3">
-                    <div class="text-sm font-bold text-slate-500">
-                        {{ Carbon\Carbon::now()->isoFormat('dddd, D MMMM YYYY') }}
-                    </div>
                 </div>
                 
                 <div class="flex items-center gap-3">

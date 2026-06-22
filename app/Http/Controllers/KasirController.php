@@ -27,6 +27,14 @@ class KasirController extends Controller
 
         $completedBookings = Booking::with(['vehicle', 'service', 'user', 'transaction.payment'])
                             ->where('status', 'Completed')
+                            ->where(function($query) {
+                                $query->whereDoesntHave('transaction')
+                                      ->orWhereHas('transaction', function($q) {
+                                          $q->whereDoesntHave('payment', function($pq) {
+                                              $pq->where('payment_status', 'Paid');
+                                          });
+                                      });
+                            })
                             ->latest()
                             ->get();
 
