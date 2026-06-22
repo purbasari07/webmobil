@@ -25,7 +25,7 @@
 <body class="h-full text-sm">
     <div class="min-h-full flex flex-col md:flex-row">
         <!-- Sidebar -->
-        <aside class="w-full md:w-56 bg-slate-900 text-slate-100 flex flex-col shrink-0">
+        <aside class="w-64 bg-slate-900 text-slate-100 flex flex-col shrink-0">
             <!-- Sidebar Header -->
             <div class="p-4 border-b border-slate-800 flex items-center gap-3">
                 <div class="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center font-extrabold text-white text-base tracking-tight shadow-lg shadow-indigo-500/30">
