@@ -53,22 +53,12 @@
 
                 <!-- New Customer Input Fields -->
                 <div id="new_customer_fields" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div>
-                            <label for="name" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Nama Lengkap</label>
-                            <input type="text" name="name" id="name" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="Contoh: Budi Santoso">
-                            @error('name')
-                                <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
-                            @enderror
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Alamat Email</label>
-                            <input type="email" name="email" id="email" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="budi@gmail.com">
-                            @error('email')
-                                <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
-                            @enderror
-                        </div>
+                    <div>
+                        <label for="name" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Nama Lengkap</label>
+                        <input type="text" name="name" id="name" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="Contoh: Budi Santoso">
+                        @error('name')
+                            <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div>
@@ -177,7 +167,6 @@
         var newFields = document.getElementById('new_customer_fields');
         var existingFields = document.getElementById('existing_customer_fields');
         var nameInput = document.getElementById('name');
-        var emailInput = document.getElementById('email');
         var phoneInput = document.getElementById('phone');
         var addressInput = document.getElementById('address');
         var selectVal = document.getElementById('user_id');
@@ -186,7 +175,6 @@
             newFields.classList.add('hidden');
             existingFields.classList.remove('hidden');
             nameInput.removeAttribute('required');
-            emailInput.removeAttribute('required');
             phoneInput.removeAttribute('required');
             addressInput.removeAttribute('required');
             selectVal.setAttribute('required', 'required');
@@ -194,7 +182,6 @@
             newFields.classList.remove('hidden');
             existingFields.classList.add('hidden');
             nameInput.setAttribute('required', 'required');
-            emailInput.setAttribute('required', 'required');
             phoneInput.setAttribute('required', 'required');
             addressInput.setAttribute('required', 'required');
             selectVal.removeAttribute('required');

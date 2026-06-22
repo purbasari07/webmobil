@@ -58,7 +58,7 @@ class KasirController extends Controller
             'user_id' => 'required_if:customer_type,existing|exists:users,id',
             // if new
             'name' => 'required_if:customer_type,new|string|max:255',
-            'email' => 'required_if:customer_type,new|email|unique:users,email',
+            'email' => 'nullable|email|unique:users,email',
             'phone' => 'required_if:customer_type,new|string|max:20',
             'address' => 'required_if:customer_type,new|string',
             // vehicle
@@ -79,9 +79,18 @@ class KasirController extends Controller
             if ($request->customer_type === 'existing') {
                 $user = User::findOrFail($request->user_id);
             } else {
+                $email = $request->email;
+                if (!$email) {
+                    $cleanPhone = preg_replace('/[^0-9]/', '', $request->phone);
+                    $email = 'offline_' . ($cleanPhone ?: uniqid()) . '@webmobil.com';
+                    while (User::where('email', $email)->exists()) {
+                        $email = 'offline_' . ($cleanPhone ?: uniqid()) . '_' . rand(10, 99) . '@webmobil.com';
+                    }
+                }
+
                 $user = User::create([
                     'name' => $request->name,
-                    'email' => $request->email,
+                    'email' => $email,
                     'password' => Hash::make('12345678'), // Default password
                     'role' => 'customer',
                     'phone' => $request->phone,
@@ -224,7 +233,7 @@ class KasirController extends Controller
             $transaction->save();
         });
 
-        return redirect()->route('invoice.print', $transaction)->with('success', 'Pembayaran sukses diproses.');
+        return redirect()->route('kasir.dashboard')->with('success', 'Pembayaran sukses diproses.');
     }
 
     public function directSaleForm()
@@ -299,7 +308,7 @@ class KasirController extends Controller
             return $transaction;
         });
 
-        return redirect()->route('invoice.print', $transaction)->with('success', 'Penjualan sparepart langsung berhasil diproses.');
+        return redirect()->route('kasir.dashboard')->with('success', 'Penjualan sparepart langsung berhasil diproses.');
     }
 
     public function invoice(Transaction $transaction)
