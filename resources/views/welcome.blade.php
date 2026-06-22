@@ -61,35 +61,35 @@
 
     <main class="flex-grow pt-16">
         <!-- Hero Section -->
-        <section id="hero" class="relative px-6 max-w-7xl mx-auto py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center text-center mt-8">
+        <section id="hero" class="relative px-6 max-w-7xl mx-auto flex flex-col items-center justify-center text-center" style="padding-top: 160px; padding-bottom: 160px; margin-top: 32px;">
             <!-- Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-600/20 rounded-full blur-[120px] -z-10 pointer-events-none" style="width: 600px; height: 600px;"></div>
 
-            <div class="inline-flex items-center gap-2 px-5 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-slate-300 mb-8 backdrop-blur-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span>
+            <div class="inline-flex items-center bg-white/5 border border-white/10 rounded-full text-slate-300 backdrop-blur-sm" style="padding: 8px 20px; gap: 8px; font-size: 14px; font-weight: 600; margin-bottom: 32px;">
+                <span class="rounded-full bg-purple-500 animate-pulse" style="width: 10px; height: 10px;"></span>
                 Sistem Manajemen Bengkel Era Baru
             </div>
 
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] max-w-4xl mx-auto mb-6">
+            <h1 class="font-extrabold tracking-tight max-w-4xl mx-auto" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 24px;">
                 Servis Mobil, 
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400">Lebih Sederhana.</span>
             </h1>
             
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-slate-400 max-w-2xl mx-auto" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 40px;">
                 Platform bengkel digital untuk booking antrean, pantauan perbaikan mekanik, dan invoice otomatis dalam satu genggaman.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row justify-center" style="gap: 16px;">
                 @auth
-                    <a href="{{ route('customer.booking.create') }}" class="px-8 py-4 bg-white text-black hover:bg-slate-200 font-extrabold rounded-2xl transition text-lg shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                    <a href="{{ route('customer.booking.create') }}" class="bg-white text-black hover:bg-slate-200 font-extrabold rounded-2xl transition shadow-[0_0_20px_rgba(255,255,255,0.15)]" style="padding: 16px 32px; font-size: 1.125rem;">
                         Booking Jadwal Servis
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-extrabold rounded-2xl transition text-lg shadow-[0_0_20px_rgba(147,51,234,0.4)]">
+                    <a href="{{ route('login') }}" class="bg-purple-600 hover:bg-purple-500 text-white font-extrabold rounded-2xl transition shadow-[0_0_20px_rgba(147,51,234,0.4)]" style="padding: 16px 32px; font-size: 1.125rem;">
                         Mulai Booking Sekarang
                     </a>
                 @endauth
-                <a href="#layanan" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-extrabold rounded-2xl transition text-lg backdrop-blur-md">
+                <a href="#layanan" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-extrabold rounded-2xl transition backdrop-blur-md" style="padding: 16px 32px; font-size: 1.125rem;">
                     Lihat Layanan
                 </a>
             </div>
