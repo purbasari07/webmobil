@@ -19,25 +19,25 @@
 
     <!-- Navbar -->
     <header class="w-full fixed top-0 z-50 bg-[#0f1115]/80 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full mx-auto px-10 md:px-16 lg:px-24 h-32 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-5 hover:opacity-80 transition">
-                <div class="h-16 w-16 bg-purple-600 rounded-2xl flex items-center justify-center font-bold text-white text-3xl shadow-lg shadow-purple-600/30">
+            <a href="#" class="flex items-center gap-3 hover:opacity-80 transition">
+                <div class="h-8 w-8 bg-purple-600 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-purple-600/30">
                     WM
                 </div>
-                <h1 class="text-3xl font-extrabold tracking-tight">webmobil</h1>
+                <h1 class="text-xl font-extrabold tracking-tight">webmobil</h1>
             </a>
 
             <!-- Menu Desktop -->
-            <nav class="hidden md:flex items-center gap-14">
-                <a href="#hero" class="text-2xl font-bold text-slate-300 hover:text-white transition">Beranda</a>
-                <a href="#layanan" class="text-2xl font-bold text-slate-300 hover:text-white transition">Layanan</a>
-                <a href="#keunggulan" class="text-2xl font-bold text-slate-300 hover:text-white transition">Keunggulan</a>
-                <a href="#testimoni" class="text-2xl font-bold text-slate-300 hover:text-white transition">Testimoni</a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="text-sm font-bold text-slate-300 hover:text-white transition">Beranda</a>
+                <a href="#layanan" class="text-sm font-bold text-slate-300 hover:text-white transition">Layanan</a>
+                <a href="#keunggulan" class="text-sm font-bold text-slate-300 hover:text-white transition">Keunggulan</a>
+                <a href="#testimoni" class="text-sm font-bold text-slate-300 hover:text-white transition">Testimoni</a>
             </nav>
 
             <!-- Auth -->
-            <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4">
                 @if (Route::has('login'))
                     @auth
                         @php
@@ -47,11 +47,11 @@
                             elseif (Auth::user()->role === 'mekanik') $dashboardRoute = 'mekanik.dashboard';
                             elseif (Auth::user()->role === 'owner') $dashboardRoute = 'owner.dashboard';
                         @endphp
-                        <a href="{{ route($dashboardRoute) }}" class="text-2xl font-bold text-purple-400 hover:text-purple-300 transition">Dashboard</a>
+                        <a href="{{ route($dashboardRoute) }}" class="text-sm font-bold text-purple-400 hover:text-purple-300 transition">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-2xl font-bold text-slate-300 hover:text-white transition hidden sm:inline-block">Login</a>
+                        <a href="{{ route('login') }}" class="text-sm font-bold text-slate-300 hover:text-white transition hidden sm:inline-block">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white text-2xl font-bold rounded-xl transition shadow-lg shadow-purple-600/30">Daftar Akun</a>
+                            <a href="{{ route('register') }}" class="px-5 py-2 bg-purple-600 hover:bg-purple-500 text-white text-sm font-bold rounded-lg transition shadow-md shadow-purple-600/30">Daftar Akun</a>
                         @endif
                     @endauth
                 @endif
@@ -59,197 +59,197 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-32">
+    <main class="flex-grow pt-16">
         <!-- Hero Section -->
-        <section id="hero" class="relative px-10 md:px-24 min-h-screen flex flex-col items-center justify-center text-center pt-10 pb-32">
+        <section id="hero" class="relative px-6 max-w-7xl mx-auto min-h-[80vh] flex flex-col items-center justify-center text-center pt-10 pb-20">
             <!-- Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[200px] -z-10 pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
-            <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-lg font-semibold text-slate-300 mb-12 backdrop-blur-sm">
-                <span class="w-3 h-3 rounded-full bg-purple-500 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-semibold text-slate-300 mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
                 Sistem Manajemen Bengkel Era Baru
             </div>
 
-            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-tight leading-tight max-w-[1400px] mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
                 Servis Mobil, <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400">Lebih Sederhana.</span>
             </h1>
             
-            <p class="text-slate-400 text-2xl md:text-3xl max-w-5xl mx-auto mt-12 leading-relaxed">
+            <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto mt-6 leading-relaxed">
                 Platform bengkel digital untuk booking antrean, pantauan perbaikan mekanik, dan invoice otomatis dalam satu genggaman.
             </p>
             
-            <div class="mt-16 flex flex-col sm:flex-row gap-8 justify-center">
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 @auth
-                    <a href="{{ route('customer.booking.create') }}" class="px-10 py-6 bg-white text-black hover:bg-slate-200 font-extrabold rounded-2xl transition text-2xl shadow-[0_0_50px_rgba(255,255,255,0.15)]">
+                    <a href="{{ route('customer.booking.create') }}" class="px-6 py-3 bg-white text-black hover:bg-slate-200 font-bold rounded-xl transition text-base shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                         Booking Jadwal Servis
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="px-10 py-6 bg-purple-600 hover:bg-purple-500 text-white font-extrabold rounded-2xl transition text-2xl shadow-[0_0_50px_rgba(147,51,234,0.4)]">
+                    <a href="{{ route('login') }}" class="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition text-base shadow-[0_0_20px_rgba(147,51,234,0.4)]">
                         Mulai Booking Sekarang
                     </a>
                 @endauth
-                <a href="#layanan" class="px-10 py-6 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-extrabold rounded-2xl transition text-2xl backdrop-blur-md">
+                <a href="#layanan" class="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-xl transition text-base backdrop-blur-md">
                     Lihat Layanan
                 </a>
             </div>
         </section>
 
         <!-- Layanan Section -->
-        <section id="layanan" class="py-40 bg-[#0a0b0e] border-t border-white/5 relative">
-            <div class="max-w-[1700px] mx-auto px-10 md:px-24">
-                <div class="text-center max-w-5xl mx-auto mb-24">
-                    <h2 class="text-6xl md:text-7xl font-bold mb-8">Layanan Profesional</h2>
-                    <p class="text-slate-400 text-2xl leading-relaxed">Solusi perawatan kendaraan paripurna. Tim mekanik kami siap membantu merawat mobil Anda agar selalu dalam kondisi prima.</p>
+        <section id="layanan" class="py-20 bg-[#0a0b0e] border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Layanan Profesional</h2>
+                    <p class="text-slate-400 text-base leading-relaxed">Solusi perawatan kendaraan paripurna. Tim mekanik kami siap membantu merawat mobil Anda agar selalu dalam kondisi prima.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="grid md:grid-cols-3 gap-8">
                     <!-- Service 1 -->
-                    <div class="p-14 bg-[#0f1115] border border-white/5 rounded-[2.5rem] hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-24 h-24 bg-purple-500/10 rounded-3xl flex items-center justify-center text-purple-400 mb-10 group-hover:scale-110 transition duration-300">
-                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
+                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
+                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
-                        <h3 class="text-4xl font-bold mb-6">Servis Berkala</h3>
-                        <p class="text-slate-400 text-xl leading-relaxed">Penggantian oli, filter udara, pengecekan busi, dan pemeliharaan standar untuk menjaga mesin tetap sehat.</p>
+                        <h3 class="text-xl font-bold mb-3">Servis Berkala</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Penggantian oli, filter udara, pengecekan busi, dan pemeliharaan standar untuk menjaga mesin tetap sehat.</p>
                     </div>
                     <!-- Service 2 -->
-                    <div class="p-14 bg-[#0f1115] border border-white/5 rounded-[2.5rem] hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-24 h-24 bg-purple-500/10 rounded-3xl flex items-center justify-center text-purple-400 mb-10 group-hover:scale-110 transition duration-300">
-                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
+                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
+                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <h3 class="text-4xl font-bold mb-6">Tune Up Mesin</h3>
-                        <p class="text-slate-400 text-xl leading-relaxed">Kalibrasi ulang mesin, injeksi, dan sistem pembakaran untuk akselerasi maksimal dan efisiensi bahan bakar.</p>
+                        <h3 class="text-xl font-bold mb-3">Tune Up Mesin</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Kalibrasi ulang mesin, injeksi, dan sistem pembakaran untuk akselerasi maksimal dan efisiensi bahan bakar.</p>
                     </div>
                     <!-- Service 3 -->
-                    <div class="p-14 bg-[#0f1115] border border-white/5 rounded-[2.5rem] hover:border-purple-500/50 transition duration-300 group">
-                        <div class="w-24 h-24 bg-purple-500/10 rounded-3xl flex items-center justify-center text-purple-400 mb-10 group-hover:scale-110 transition duration-300">
-                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
+                        <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
+                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <h3 class="text-4xl font-bold mb-6">Sistem Rem & Kaki</h3>
-                        <p class="text-slate-400 text-xl leading-relaxed">Pemeriksaan rem komprehensif, ganti kampas, balancing, serta spooring untuk kenyamanan dan keamanan.</p>
+                        <h3 class="text-xl font-bold mb-3">Sistem Rem & Kaki</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Pemeriksaan rem komprehensif, ganti kampas, balancing, serta spooring untuk kenyamanan dan keamanan.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Keunggulan Section -->
-        <section id="keunggulan" class="py-40 relative overflow-hidden">
-            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[200px] -z-10 pointer-events-none"></div>
+        <section id="keunggulan" class="py-20 relative overflow-hidden">
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
-            <div class="max-w-[1700px] mx-auto px-10 md:px-24 grid lg:grid-cols-2 gap-24 items-center">
-                <div class="space-y-12">
-                    <h2 class="text-6xl md:text-7xl font-bold leading-tight">Pengalaman Digital Sepenuhnya</h2>
-                    <p class="text-slate-400 text-2xl leading-relaxed">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight">Pengalaman Digital Sepenuhnya</h2>
+                    <p class="text-slate-400 text-base leading-relaxed">
                         Tinggalkan antrean yang membosankan dan transparansi harga yang buruk. Melalui sistem bengkel kami, semua dapat dilakukan melalui ponsel cerdas Anda.
                     </p>
                     
-                    <div class="space-y-10 pt-6">
-                        <div class="flex gap-8">
-                            <div class="w-20 h-20 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <div class="space-y-6 pt-4">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-3xl font-bold mb-3">Booking Mudah</h4>
-                                <p class="text-slate-400 text-xl leading-relaxed">Pilih slot waktu sesuai ketersediaan jadwal Anda langsung dari aplikasi.</p>
+                                <h4 class="text-xl font-bold mb-1">Booking Mudah</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Pilih slot waktu sesuai ketersediaan jadwal Anda langsung dari aplikasi.</p>
                             </div>
                         </div>
-                        <div class="flex gap-8">
-                            <div class="w-20 h-20 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-3xl font-bold mb-3">Pantau Status Real-Time</h4>
-                                <p class="text-slate-400 text-xl leading-relaxed">Lihat apakah mobil Anda sedang dikerjakan mekanik atau sudah selesai.</p>
+                                <h4 class="text-xl font-bold mb-1">Pantau Status Real-Time</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Lihat apakah mobil Anda sedang dikerjakan mekanik atau sudah selesai.</p>
                             </div>
                         </div>
-                        <div class="flex gap-8">
-                            <div class="w-20 h-20 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                                <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-3xl font-bold mb-3">Invoice Digital & Transparan</h4>
-                                <p class="text-slate-400 text-xl leading-relaxed">Rincian sparepart, biaya perbaikan, dan riwayat disimpan rapi tanpa kertas.</p>
+                                <h4 class="text-xl font-bold mb-1">Invoice Digital & Transparan</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">Rincian sparepart, biaya perbaikan, dan riwayat disimpan rapi tanpa kertas.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Stats Visual -->
-                <div class="grid grid-cols-2 gap-10 relative">
-                    <div class="p-12 bg-white/5 border border-white/10 rounded-[2.5rem] text-center backdrop-blur-md">
-                        <h3 class="text-7xl font-extrabold text-white mb-4">12K+</h3>
-                        <p class="text-slate-400 font-medium text-xl">Mobil Terservis</p>
+                <div class="grid grid-cols-2 gap-6 relative">
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md">
+                        <h3 class="text-4xl font-extrabold text-white mb-2">12K+</h3>
+                        <p class="text-slate-400 font-medium text-sm">Mobil Terservis</p>
                     </div>
-                    <div class="p-12 bg-white/5 border border-white/10 rounded-[2.5rem] text-center backdrop-blur-md translate-y-12">
-                        <h3 class="text-7xl font-extrabold text-purple-400 mb-4">99%</h3>
-                        <p class="text-slate-400 font-medium text-xl">Kepuasan Pelanggan</p>
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md translate-y-6">
+                        <h3 class="text-4xl font-extrabold text-purple-400 mb-2">99%</h3>
+                        <p class="text-slate-400 font-medium text-sm">Kepuasan Pelanggan</p>
                     </div>
-                    <div class="p-12 bg-white/5 border border-white/10 rounded-[2.5rem] text-center backdrop-blur-md">
-                        <h3 class="text-7xl font-extrabold text-white mb-4">30+</h3>
-                        <p class="text-slate-400 font-medium text-xl">Mekanik Handal</p>
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md">
+                        <h3 class="text-4xl font-extrabold text-white mb-2">30+</h3>
+                        <p class="text-slate-400 font-medium text-sm">Mekanik Handal</p>
                     </div>
-                    <div class="p-12 bg-white/5 border border-white/10 rounded-[2.5rem] text-center backdrop-blur-md translate-y-12">
-                        <h3 class="text-7xl font-extrabold text-white mb-4">4.9</h3>
-                        <p class="text-slate-400 font-medium text-xl">Rating Google</p>
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-3xl text-center backdrop-blur-md translate-y-6">
+                        <h3 class="text-4xl font-extrabold text-white mb-2">4.9</h3>
+                        <p class="text-slate-400 font-medium text-sm">Rating Google</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimoni Section -->
-        <section id="testimoni" class="py-40 bg-[#0a0b0e] border-t border-white/5">
-            <div class="max-w-[1700px] mx-auto px-10 md:px-24">
-                <div class="text-center max-w-5xl mx-auto mb-24">
-                    <h2 class="text-6xl md:text-7xl font-extrabold mb-8">Ulasan Pelanggan</h2>
-                    <p class="text-slate-400 text-2xl leading-relaxed">Mereka yang telah merasakan pengalaman bebas antre dan transparansi biaya servis.</p>
+        <section id="testimoni" class="py-20 bg-[#0a0b0e] border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ulasan Pelanggan</h2>
+                    <p class="text-slate-400 text-base leading-relaxed">Mereka yang telah merasakan pengalaman bebas antre dan transparansi biaya servis.</p>
                 </div>
 
-                <div class="grid lg:grid-cols-3 gap-12">
+                <div class="grid md:grid-cols-3 gap-8">
                     <!-- Card 1 -->
-                    <div class="p-16 bg-[#0f1115] border border-white/5 rounded-[3rem] relative flex flex-col justify-between">
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
                         <div>
-                            <div class="text-purple-500 mb-10 text-7xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-2xl leading-relaxed mb-16 font-medium">
+                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
                                 Proses masuk bengkel sangat mulus. Booking dari aplikasi semalam, pagi datang langsung ditangani. Sangat praktis!
                             </p>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
-                            <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center font-bold text-3xl">R</div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">R</div>
                             <div>
-                                <h4 class="font-extrabold text-2xl">Reza H.</h4>
-                                <p class="text-lg text-slate-500 mt-1">Honda CR-V</p>
+                                <h4 class="font-bold text-base">Reza H.</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Honda CR-V</p>
                             </div>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="p-16 bg-[#0f1115] border border-white/5 rounded-[3rem] relative flex flex-col justify-between">
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
                         <div>
-                            <div class="text-purple-500 mb-10 text-7xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-2xl leading-relaxed mb-16 font-medium">
+                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
                                 Suka dengan fitur transparansi harganya. Mekanik selalu minta persetujuan di aplikasi sebelum mengganti sparepart.
                             </p>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
-                            <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center font-bold text-3xl">A</div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">A</div>
                             <div>
-                                <h4 class="font-extrabold text-2xl">Anita P.</h4>
-                                <p class="text-lg text-slate-500 mt-1">Toyota Yaris</p>
+                                <h4 class="font-bold text-base">Anita P.</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Toyota Yaris</p>
                             </div>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="p-16 bg-[#0f1115] border border-white/5 rounded-[3rem] relative flex flex-col justify-between">
+                    <div class="p-8 bg-[#0f1115] border border-white/5 rounded-3xl relative flex flex-col justify-between">
                         <div>
-                            <div class="text-purple-500 mb-10 text-7xl font-serif leading-none">"</div>
-                            <p class="text-slate-300 text-2xl leading-relaxed mb-16 font-medium">
+                            <div class="text-purple-500 mb-4 text-4xl font-serif leading-none">"</div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
                                 Invoice digitalnya bikin gampang klaim servis kantor. Tinggal unduh dari dashboard, rapi dan profesional.
                             </p>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
-                            <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center font-bold text-3xl">B</div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold text-lg">B</div>
                             <div>
-                                <h4 class="font-extrabold text-2xl">Budi K.</h4>
-                                <p class="text-lg text-slate-500 mt-1">Mitsubishi Xpander</p>
+                                <h4 class="font-bold text-base">Budi K.</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Mitsubishi Xpander</p>
                             </div>
                         </div>
                     </div>
@@ -258,16 +258,16 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-48 relative overflow-hidden text-center">
+        <section class="py-24 relative overflow-hidden text-center">
             <div class="absolute inset-0 bg-purple-600/5"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-purple-600/20 rounded-full blur-[250px] -z-10 pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
             
-            <div class="max-w-[1700px] mx-auto px-10 md:px-24 relative z-10">
-                <h2 class="text-6xl sm:text-7xl md:text-8xl font-extrabold mb-12 text-white tracking-tight leading-tight">Siap Untuk Servis Berikutnya?</h2>
-                <p class="text-2xl md:text-3xl text-purple-100 mb-16 opacity-80 max-w-4xl mx-auto leading-relaxed">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight leading-tight">Siap Untuk Servis Berikutnya?</h2>
+                <p class="text-base text-purple-100 mb-10 opacity-80 max-w-2xl mx-auto leading-relaxed">
                     Bergabunglah dengan ribuan pemilik mobil lainnya yang telah merasakan mudahnya merawat kendaraan secara transparan dan efisien.
                 </p>
-                <a href="{{ route('register') }}" class="inline-block px-14 py-8 bg-white text-black hover:bg-slate-200 font-extrabold rounded-3xl transition text-3xl shadow-[0_0_60px_rgba(255,255,255,0.2)]">
+                <a href="{{ route('register') }}" class="inline-block px-8 py-4 bg-white text-black hover:bg-slate-200 font-bold rounded-2xl transition text-lg shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                     Daftar Sekarang Secara Gratis
                 </a>
             </div>
@@ -275,23 +275,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#050507] pt-32 pb-16 border-t border-white/5">
-        <div class="max-w-[1700px] mx-auto px-10 md:px-24">
-            <div class="grid lg:grid-cols-4 gap-20 mb-24">
-                <div class="lg:col-span-2">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="h-16 w-16 bg-purple-600 rounded-2xl flex items-center justify-center font-bold text-white text-2xl">
+    <footer class="bg-[#050507] pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 mb-16">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="h-10 w-10 bg-purple-600 rounded-xl flex items-center justify-center font-bold text-white text-lg">
                             WM
                         </div>
-                        <h2 class="text-4xl font-bold tracking-tight">webmobil</h2>
+                        <h2 class="text-2xl font-bold tracking-tight">webmobil</h2>
                     </div>
-                    <p class="text-slate-400 text-xl leading-relaxed max-w-2xl">
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-md">
                         Transformasi pengalaman bengkel menjadi sepenuhnya digital. Lebih mudah, transparan, dan terpercaya.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white text-2xl mb-8">Menu Cepat</h4>
-                    <ul class="space-y-6 text-xl">
+                    <h4 class="font-bold text-white text-lg mb-4">Menu Cepat</h4>
+                    <ul class="space-y-3 text-sm">
                         <li><a href="#hero" class="text-slate-400 hover:text-purple-400 transition">Beranda</a></li>
                         <li><a href="#layanan" class="text-slate-400 hover:text-purple-400 transition">Layanan</a></li>
                         <li><a href="#keunggulan" class="text-slate-400 hover:text-purple-400 transition">Keunggulan</a></li>
@@ -299,15 +299,15 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white text-2xl mb-8">Kontak Kami</h4>
-                    <ul class="space-y-6 text-xl text-slate-400">
+                    <h4 class="font-bold text-white text-lg mb-4">Kontak Kami</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
                         <li>halo@webmobil.com</li>
                         <li>0812-3456-7890</li>
                         <li>Jl. Sudirman No. 123, Jakarta</li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-lg">
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
                 <p class="text-slate-500">© 2026 webmobil Bengkel Digital. Hak Cipta Dilindungi.</p>
             </div>
         </div>
@@ -315,5 +315,3 @@
 
 </body>
 </html>
-
-
