@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Create Default Users for Roles
         $admin = User::create([
-            'name' => 'Workshop Admin',
+            'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('12345678'),
             'role' => 'admin',
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $kasir = User::create([
-            'name' => 'Workshop Kasir',
+            'name' => 'Kasir',
             'email' => 'kasir@gmail.com',
             'password' => Hash::make('12345678'),
             'role' => 'kasir',
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $mekanik = User::create([
-            'name' => 'Workshop Mekanik',
+            'name' => 'Mekanik',
             'email' => 'mekanik@gmail.com',
             'password' => Hash::make('12345678'),
             'role' => 'mekanik',
@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $owner = User::create([
-            'name' => 'Workshop Owner',
+            'name' => 'Owner',
             'email' => 'owner@gmail.com',
             'password' => Hash::make('12345678'),
             'role' => 'owner',
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $customer = User::create([
-            'name' => 'Workshop Customer',
+            'name' => 'Customer',
             'email' => 'customer@gmail.com',
             'password' => Hash::make('12345678'),
             'role' => 'customer',

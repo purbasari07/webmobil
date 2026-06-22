@@ -23,39 +23,13 @@
             <div class="space-y-6">
                 <h3 class="text-2xl font-extrabold text-slate-800 tracking-tight border-b border-slate-100 pb-4">1. Data Customer</h3>
                 
-                <div>
-                    <label class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Jenis Customer</label>
-                    <div class="flex items-center gap-8">
-                        <label class="flex items-center">
-                            <input type="radio" name="customer_type" value="new" checked onclick="toggleCustomerType('new')" class="h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-slate-300">
-                            <span class="ml-3 text-base text-slate-700 font-bold">Customer Baru</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="radio" name="customer_type" value="existing" onclick="toggleCustomerType('existing')" class="h-5 w-5 text-indigo-600 focus:ring-indigo-500 border-slate-300">
-                            <span class="ml-3 text-base text-slate-700 font-bold">Customer Lama (Terdaftar)</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Existing Customer Input -->
-                <div id="existing_customer_fields" class="hidden">
-                    <label for="user_id" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Pilih Customer Lama</label>
-                    <select name="user_id" id="user_id" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium">
-                        <option value="" disabled selected>-- Pilih Customer --</option>
-                        @foreach($customers as $cust)
-                            <option value="{{ $cust->id }}">{{ $cust->name }} ({{ $cust->phone }} - {{ $cust->email }})</option>
-                        @endforeach
-                    </select>
-                    @error('user_id')
-                        <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
-                    @enderror
-                </div>
+                <input type="hidden" name="customer_type" value="new">
 
                 <!-- New Customer Input Fields -->
                 <div id="new_customer_fields" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Nama Lengkap</label>
-                        <input type="text" name="name" id="name" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="Contoh: Budi Santoso">
+                        <input type="text" name="name" id="name" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="Contoh: Budi Santoso">
                         @error('name')
                             <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
                         @enderror
@@ -63,7 +37,7 @@
 
                     <div>
                         <label for="phone" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Nomor Telepon / WA</label>
-                        <input type="text" name="phone" id="phone" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="0812XXXXXXXX">
+                        <input type="text" name="phone" id="phone" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium" placeholder="0812XXXXXXXX">
                         @error('phone')
                             <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
                         @enderror
@@ -71,7 +45,7 @@
 
                     <div>
                         <label for="address" class="block text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Alamat Lengkap</label>
-                        <textarea name="address" id="address" rows="3" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium resize-none" placeholder="Masukkan alamat lengkap..."></textarea>
+                        <textarea name="address" id="address" rows="3" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition text-base font-medium resize-none" placeholder="Masukkan alamat lengkap..."></textarea>
                         @error('address')
                             <p class="text-sm text-rose-500 mt-2 font-bold">{{ $message }}</p>
                         @enderror
@@ -161,31 +135,4 @@
         </form>
     </div>
 </div>
-
-<script>
-    function toggleCustomerType(type) {
-        var newFields = document.getElementById('new_customer_fields');
-        var existingFields = document.getElementById('existing_customer_fields');
-        var nameInput = document.getElementById('name');
-        var phoneInput = document.getElementById('phone');
-        var addressInput = document.getElementById('address');
-        var selectVal = document.getElementById('user_id');
-
-        if (type === 'existing') {
-            newFields.classList.add('hidden');
-            existingFields.classList.remove('hidden');
-            nameInput.removeAttribute('required');
-            phoneInput.removeAttribute('required');
-            addressInput.removeAttribute('required');
-            selectVal.setAttribute('required', 'required');
-        } else {
-            newFields.classList.remove('hidden');
-            existingFields.classList.add('hidden');
-            nameInput.setAttribute('required', 'required');
-            phoneInput.setAttribute('required', 'required');
-            addressInput.setAttribute('required', 'required');
-            selectVal.removeAttribute('required');
-        }
-    }
-</script>
 @endsection

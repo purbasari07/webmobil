@@ -45,9 +45,7 @@ class KasirController extends Controller
     public function createOfflineForm()
     {
         $services = Service::all();
-        // Get list of existing customer users for select dropdown option
-        $customers = User::where('role', 'customer')->orderBy('name')->get();
-        return view('kasir.booking_offline', compact('services', 'customers'));
+        return view('kasir.booking_offline', compact('services'));
     }
 
     public function storeOffline(Request $request)
