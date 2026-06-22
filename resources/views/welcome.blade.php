@@ -258,16 +258,13 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-24 relative overflow-hidden text-center">
-            <div class="absolute inset-0 bg-purple-600/5"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight leading-tight">Siap Untuk Servis Berikutnya?</h2>
-                <p class="text-base text-purple-100 mb-10 opacity-80 max-w-2xl mx-auto leading-relaxed">
+        <section style="padding: 80px 24px; text-align: center; background: linear-gradient(to bottom, #0f1115, #1a0b2e, #0f1115); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.2;">Siap Untuk Servis Berikutnya?</h2>
+                <p style="font-size: 1rem; color: #c4b5fd; margin-bottom: 36px; line-height: 1.7; opacity: 0.85;">
                     Bergabunglah dengan ribuan pemilik mobil lainnya yang telah merasakan mudahnya merawat kendaraan secara transparan dan efisien.
                 </p>
-                <a href="{{ route('register') }}" class="inline-block px-8 py-4 bg-white text-black hover:bg-slate-200 font-bold rounded-2xl transition text-lg shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                <a href="{{ route('register') }}" style="display: inline-block; padding: 14px 36px; background: #fff; color: #0f1115; font-weight: 700; font-size: 1rem; border-radius: 16px; text-decoration: none; transition: background 0.2s;">
                     Daftar Sekarang Secara Gratis
                 </a>
             </div>
@@ -275,40 +272,48 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#050507] pt-16 pb-8 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-10 mb-16">
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="h-10 w-10 bg-purple-600 rounded-xl flex items-center justify-center font-bold text-white text-lg">
-                            WM
-                        </div>
-                        <h2 class="text-2xl font-bold tracking-tight">webmobil</h2>
+    <footer style="background: #050507; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 24px 32px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+
+            <!-- Footer Top Grid -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 48px;">
+
+                <!-- Brand -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <div style="width: 36px; height: 36px; background: #7c3aed; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; font-size: 13px;">WM</div>
+                        <span style="font-size: 1.2rem; font-weight: 700; color: #fff;">webmobil</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-md">
+                    <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.7; max-width: 300px;">
                         Transformasi pengalaman bengkel menjadi sepenuhnya digital. Lebih mudah, transparan, dan terpercaya.
                     </p>
                 </div>
+
+                <!-- Menu Cepat -->
                 <div>
-                    <h4 class="font-bold text-white text-lg mb-4">Menu Cepat</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#hero" class="text-slate-400 hover:text-purple-400 transition">Beranda</a></li>
-                        <li><a href="#layanan" class="text-slate-400 hover:text-purple-400 transition">Layanan</a></li>
-                        <li><a href="#keunggulan" class="text-slate-400 hover:text-purple-400 transition">Keunggulan</a></li>
-                        <li><a href="#testimoni" class="text-slate-400 hover:text-purple-400 transition">Testimoni</a></li>
+                    <h4 style="font-size: 0.875rem; font-weight: 700; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;">Menu Cepat</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="#hero" style="color: #94a3b8; text-decoration: none; font-size: 0.875rem;">Beranda</a></li>
+                        <li><a href="#layanan" style="color: #94a3b8; text-decoration: none; font-size: 0.875rem;">Layanan</a></li>
+                        <li><a href="#keunggulan" style="color: #94a3b8; text-decoration: none; font-size: 0.875rem;">Keunggulan</a></li>
+                        <li><a href="#testimoni" style="color: #94a3b8; text-decoration: none; font-size: 0.875rem;">Testimoni</a></li>
                     </ul>
                 </div>
+
+                <!-- Kontak -->
                 <div>
-                    <h4 class="font-bold text-white text-lg mb-4">Kontak Kami</h4>
-                    <ul class="space-y-3 text-sm text-slate-400">
-                        <li>halo@webmobil.com</li>
-                        <li>0812-3456-7890</li>
-                        <li>Jl. Sudirman No. 123, Jakarta</li>
+                    <h4 style="font-size: 0.875rem; font-weight: 700; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;">Kontak Kami</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                        <li style="color: #94a3b8; font-size: 0.875rem;">halo@webmobil.com</li>
+                        <li style="color: #94a3b8; font-size: 0.875rem;">0812-3456-7890</li>
+                        <li style="color: #94a3b8; font-size: 0.875rem;">Jl. Sudirman No. 123, Jakarta</li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-                <p class="text-slate-500">© 2026 webmobil Bengkel Digital. Hak Cipta Dilindungi.</p>
+
+            <!-- Footer Bottom -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; text-align: center;">
+                <p style="color: #475569; font-size: 0.8rem;">© 2026 webmobil Bengkel Digital. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
