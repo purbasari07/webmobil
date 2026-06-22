@@ -61,7 +61,7 @@
 
     <main class="flex-grow pt-16">
         <!-- Hero Section -->
-        <section id="hero" class="relative px-6 max-w-7xl mx-auto min-h-[80vh] flex flex-col items-center justify-center text-center pt-10 pb-20">
+        <section id="hero" class="relative px-6 max-w-7xl mx-auto py-24 md:py-32 lg:py-40 flex flex-col items-center justify-center text-center mt-8">
             <!-- Glow -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
@@ -70,16 +70,16 @@
                 Sistem Manajemen Bengkel Era Baru
             </div>
 
-            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-tight max-w-5xl mx-auto">
-                Servis Mobil, <br>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] max-w-4xl mx-auto mb-6">
+                Servis Mobil, 
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400">Lebih Sederhana.</span>
             </h1>
             
-            <p class="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mt-8 leading-relaxed">
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                 Platform bengkel digital untuk booking antrean, pantauan perbaikan mekanik, dan invoice otomatis dalam satu genggaman.
             </p>
             
-            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 @auth
                     <a href="{{ route('customer.booking.create') }}" class="px-8 py-4 bg-white text-black hover:bg-slate-200 font-extrabold rounded-2xl transition text-lg shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                         Booking Jadwal Servis
