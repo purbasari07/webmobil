@@ -63,33 +63,33 @@
         <!-- Hero Section -->
         <section id="hero" class="relative px-6 max-w-7xl mx-auto min-h-[80vh] flex flex-col items-center justify-center text-center pt-10 pb-20">
             <!-- Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-semibold text-slate-300 mb-8 backdrop-blur-sm">
-                <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-5 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-slate-300 mb-8 backdrop-blur-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span>
                 Sistem Manajemen Bengkel Era Baru
             </div>
 
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
+            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-tight max-w-5xl mx-auto">
                 Servis Mobil, <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400">Lebih Sederhana.</span>
             </h1>
             
-            <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto mt-6 leading-relaxed">
+            <p class="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mt-8 leading-relaxed">
                 Platform bengkel digital untuk booking antrean, pantauan perbaikan mekanik, dan invoice otomatis dalam satu genggaman.
             </p>
             
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
                 @auth
-                    <a href="{{ route('customer.booking.create') }}" class="px-6 py-3 bg-white text-black hover:bg-slate-200 font-bold rounded-xl transition text-base shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                    <a href="{{ route('customer.booking.create') }}" class="px-8 py-4 bg-white text-black hover:bg-slate-200 font-extrabold rounded-2xl transition text-lg shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                         Booking Jadwal Servis
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition text-base shadow-[0_0_20px_rgba(147,51,234,0.4)]">
+                    <a href="{{ route('login') }}" class="px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-extrabold rounded-2xl transition text-lg shadow-[0_0_20px_rgba(147,51,234,0.4)]">
                         Mulai Booking Sekarang
                     </a>
                 @endauth
-                <a href="#layanan" class="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold rounded-xl transition text-base backdrop-blur-md">
+                <a href="#layanan" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-extrabold rounded-2xl transition text-lg backdrop-blur-md">
                     Lihat Layanan
                 </a>
             </div>

@@ -23,7 +23,7 @@
     </a>
 
     <!-- Card (White & Smaller) -->
-    <div class="w-full max-w-md bg-white rounded-3xl p-8 sm:p-10 shadow-2xl text-slate-900">
+    <div class="bg-white rounded-3xl p-8 shadow-2xl text-slate-900 mx-auto" style="width: 100%; max-width: 400px;">
         <h2 class="text-2xl font-extrabold mb-8 text-center text-slate-900">Masuk ke Akun</h2>
 
         <form action="{{ route('login') }}" method="POST" class="space-y-5">

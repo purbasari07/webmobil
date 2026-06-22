@@ -23,7 +23,7 @@
     </a>
 
     <!-- Card (White & Smaller) -->
-    <div class="w-full max-w-2xl bg-white rounded-3xl p-8 sm:p-10 shadow-2xl text-slate-900">
+    <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl text-slate-900 mx-auto" style="width: 100%; max-width: 600px;">
         <h2 class="text-2xl font-extrabold mb-8 text-center text-slate-900">Buat Akun Baru</h2>
 
         <form action="{{ route('register') }}" method="POST" class="space-y-5">
